@@ -21,7 +21,7 @@
     "build:watch": "run-p generate:declaration:watch generate:esm:watch compile:watch"
   },
   "devDependencies": {
-    "@wufe/particles": "^1.4.2",
+    "@wufe/particles": "^1.4.3",
     "babel-loader": "^8.1.0",
     "cross-env": "^7.0.2",
     "glslify-bundle": "^5.1.1",
@@ -36,6 +36,6 @@
     "webpack-cli": "^3.3.11"
   },
   "peerDependencies": {
-    "@wufe/particles": "^1.4.2"
+    "@wufe/particles": "^1.4.3"
   }
 }
