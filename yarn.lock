@@ -1008,10 +1008,10 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
-"@wufe/particles@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@wufe/particles/-/particles-1.2.0.tgz#20b4fdc0ee038e097bda72330588ec6a5612d8c1"
-  integrity sha512-a0wyDlhIDg83lsErG28e3eTR1P0MUMtQJJILdJ9lvIl/CEE6U+/6kMAirF0w/0/AjOdf/FAfVMy5f7BxvVFJYA==
+"@wufe/particles@^1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@wufe/particles/-/particles-1.4.2.tgz#207ca6d5fd5a94ff26596c53b73e4262eb816552"
+  integrity sha512-ZeQq5zbbAqGSYy2tTCV83BiCIsdPfHutpYQp8MqBn4laxPMZazuPzeUI5VeqNLRLm+K18RbYgEN0qs13nEG5LQ==
   dependencies:
     gl-matrix "^3.1.0"
 
