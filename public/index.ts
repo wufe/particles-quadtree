@@ -1,6 +1,6 @@
 import { init, DefaultParticleSystemBuilder, RendererWebGLBuilder } from '@wufe/particles';
 import { QuadTreeFeatureBuilder } from '../src/webgl/quadtree/quadtree-feature';
-import { QuadTreeProximityDetectionSystem } from '../src/quad-tree-proximity-detection-system';
+import { QuadTreeProximityDetectionSystem, QuadTreeProximityDetectionSystemBuilder } from '../src/quad-tree-proximity-detection-system';
 
 init({
     selectorOrCanvas: '#canvas',
@@ -23,7 +23,9 @@ init({
         depthOfField: true
     },
     fpsLimit: 30,
-    proximityDetectionSystem: QuadTreeProximityDetectionSystem,
+    proximityDetection: {
+        system: QuadTreeProximityDetectionSystemBuilder.build()
+    },
     events: {
         resize: {
             enabled: true,
