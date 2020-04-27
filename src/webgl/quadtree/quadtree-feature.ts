@@ -21,7 +21,7 @@ class QuadTreeFeature implements IFeature {
     constructor(private _manager: ILibraryInterface, private _params: TQuadTreeFeatureParams) {}
     
     isAvailable() {
-        return this._manager.params.proximityDetectionSystem === QuadTreeProximityDetectionSystem;
+        return this._manager.getProximityDetectionSystem() instanceof QuadTreeProximityDetectionSystem;
     }
     
     buildProgram(gl: WebGLRenderingContext, viewBox: ViewBox, libraryInterface: IWebGLLibraryInterface, ...args: any[]) {

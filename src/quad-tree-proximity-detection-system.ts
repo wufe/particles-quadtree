@@ -1,9 +1,21 @@
-import { IProximityDetectionSystem, ILibraryInterface, IParticle, Vector3D } from "@wufe/particles";
+import { IProximityDetectionSystem, ILibraryInterface, IParticle, Vector3D, TProximityDetectionSystemBuilder, getDefault, RecursivePartial } from "@wufe/particles";
 import { QuadTree, Box } from "./quad-tree";
+
+type TQuadTreeProximityDetectionSystemParams = {
+    radius: number;
+}
+
+export class QuadTreeProximityDetectionSystemBuilder {
+    static build = (partialParams?: RecursivePartial<TQuadTreeProximityDetectionSystemParams>): TProximityDetectionSystemBuilder => ({
+        build: manager => new QuadTreeProximityDetectionSystem(manager, getDefault(partialParams, {
+            radius: 300
+        }))
+    })
+}
 
 export class QuadTreeProximityDetectionSystem implements IProximityDetectionSystem {
 
-    constructor(private _manager: ILibraryInterface) {}
+    constructor(private _manager: ILibraryInterface, private _params: TQuadTreeProximityDetectionSystemParams) {}
 
     quadTree: QuadTree | null = null;
 
@@ -25,7 +37,7 @@ export class QuadTreeProximityDetectionSystem implements IProximityDetectionSyst
         this.quadTree = quadTree;
     }
 
-    getNeighbours(object: IParticle, radius: number = 200): IParticle[] {
+    getNeighbours(object: IParticle, radius: number = this._params.radius): IParticle[] {
 
         const position = (object.coords as Vector3D).clone();
         const dimensions = new Vector3D({ x: radius, y: radius, z: radius });

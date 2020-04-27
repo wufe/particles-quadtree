@@ -38,7 +38,6 @@ export class QuadTreeProgram extends BaseProgram<Attr, Uni> implements IProgram 
             viewBox,
             libraryInterface
         );
-        console.log(quadTreeVertexShader)
     }
 
     private _getQuadTree() {
