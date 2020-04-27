@@ -1,6 +1,6 @@
 {
   "name": "@wufe/particles-quadtree",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/cjs/index.js",
   "license": "MIT",
   "types": "index.d.ts",
