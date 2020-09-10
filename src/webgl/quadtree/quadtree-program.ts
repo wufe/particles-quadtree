@@ -45,6 +45,7 @@ export class QuadTreeProgram extends BaseProgram<Attr, Uni> implements IProgram 
     }
 
     init() {
+        super.init();
         const [r, g, b, a] = this._params.color;
         this._color = new Float32Array(getColor(r, g, b, a));
         this._vectorsBuffer = this._gl.createBuffer();
